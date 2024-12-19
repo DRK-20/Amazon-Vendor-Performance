@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}Analyze Product{% endblock %}
+
+{% block content %}
+<div class="card form-container">
+    <div class="card-body">
+        <h2 class="card-title text-center">Analyze a Registered Product</h2>
+        <form method="post" action="{% url 'analyze_product' %}">
+            {% csrf_token %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert {% if 'error' in message.tags %}alert-danger{% elif 'info' in message.tags %}alert-info{% else %}alert-success{% endif %}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+            <div class="mb-3">
+                <label for="asin" class="form-label">Select Product to Analyze</label>
+                <select name="asin" id="asin" class="form-select" required>
+                    <option value="" disabled selected>Select ASIN</option>
+                    {% for product in user.registered_products.all %}
+                        <option value="{{ product.asin }}">{{ product.product_name }} ({{ product.asin }})</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Analyze</button>
+        </form>
+    </div>
+</div>
+{% block extra_css %}
+<style>
+    .card {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .card:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s;
+    }
+</style>
+{% endblock %}
+{% endblock %}

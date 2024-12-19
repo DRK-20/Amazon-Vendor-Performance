@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}Analysis Results{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center">Analysis Results for "{{ product.product_name }}"</h2>
+    {% if analyses %}
+    {% for analysis in analyses %}
+    <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title">Analysis {{ forloop.counter }}</h5>
+            <h6>Issues:</h6>
+            <ul>
+                {% for issue in analysis.issues %}
+                <li>{{ issue }}</li>
+                {% endfor %}
+            </ul>
+            <h6>Suggestions:</h6>
+            <ul>
+                {% for suggestion in analysis.suggestions %}
+                <li>{{ suggestion }}</li>
+                {% endfor %}
+            </ul>
+            <p class="text-muted">Analyzed on: {{ analysis.created_at }}</p>
+        </div>
+    </div>
+    {% endfor %}
+    {% else %}
+    <p>No analyses available for this product.</p>
+    {% endif %}
+</div>
+{% block extra_css %}
+<style>
+    .card {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s;
+    }
+</style>
+{% endblock %}
+{% endblock %}
