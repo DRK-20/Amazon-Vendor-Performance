@@ -1,6 +1,11 @@
 import google.generativeai as genai
+from dotenv import load_dotenv
+import os
 
 def get_genai_response(product_data):
+    load_dotenv()
+    API_KEY = os.getenv("API_KEY")
+
     prompt = f'''
     Product name - {product_data['product_name']}
     Analyze the product based on customer reviews and feedback:
@@ -15,7 +20,7 @@ def get_genai_response(product_data):
 
     Strictly follow the format without any extra texts before this.
     '''
-    genai.configure(api_key='AIzaSyB2e1etzK26R3R0AnkwV3dHeDJ66FWurUc')
+    genai.configure(api_key=API_KEY)
 
     generation_config = {
         'temperature': 0.85,
