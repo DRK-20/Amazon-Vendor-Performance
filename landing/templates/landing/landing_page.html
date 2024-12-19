@@ -1,0 +1,167 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Amazon Vednor Performance{% endblock %}
+
+{% block content %}
+<section class="text-white text-center py-5 rounded" style="background-image: url({% static 'images/back1.jpg' %}); background-size: cover; background-position: bottom;">
+    <div class="container">
+        <h1 class="display-4 fw-bold mb-4" data-aos="fade-down">Amazon Vednor Performance</h1>
+        <a href="{% url 'registrations:register_product' %}" class="btn btn-light mb-4" data-aos="zoom-in">Get started</a>
+        <p class="lead mb-4" data-aos="fade-up" data-aos-delay="200">Empowering you to manage your products seamlessly and efficiently.</p>
+        </div>
+</section>
+
+<section class="about-features py-5">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="feature-icon mb-3">
+                    <i class="bi bi-bar-chart-line-fill" style="font-size: 3rem; color: #0d6efd;"></i>
+                </div>
+                <h4>Data Scraping from Amazon</h4>
+                <p>Seamlessly extract product details directly from Amazon's vast database, ensuring you have the most up-to-date information at your fingertips.</p>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="feature-icon mb-3">
+                    <i class="bi bi-robot" style="font-size: 3rem; color: #0d6efd;"></i>
+                </div>
+                <h4>Advanced AI Analytics</h4>
+                <p>Leverage cutting-edge AI technologies to analyze product performance, identify trends, and generate actionable insights tailored to your business needs.</p>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="feature-icon mb-3">
+                    <i class="bi bi-clipboard-data" style="font-size: 3rem; color: #0d6efd;"></i>
+                </div>
+                <h4>User-Friendly Dashboard</h4>
+                <p>Access a comprehensive and intuitive dashboard that presents your data in easy-to-understand charts, graphs, and reports, enabling informed decision-making.</p>
+            </div>
+        </div>
+
+        <div class="row text-center justify-content-center">
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="feature-icon mb-3">
+                    <i class="bi bi-speedometer2" style="font-size: 3rem; color: #0d6efd;"></i>
+                </div>
+                <h4>Real-Time Performance Tracking</h4>
+                <p>Monitor your product metrics in real-time, allowing you to respond swiftly to market changes and optimize your strategies effectively.</p>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="feature-icon mb-3">
+                    <i class="bi bi-shield-lock-fill" style="font-size: 3rem; color: #0d6efd;"></i>
+                </div>
+                <h4>Secure Data Management</h4>
+                <p>Ensure the safety and integrity of your data with our robust security measures, protecting your valuable business insights from unauthorized access.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="workflow-section bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">How It Works</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="row align-items-center">
+                    <div class="col-md-4" data-aos="fade-right">
+                        <img src="{% static 'images/collect.jpeg' %}" alt="Data Scraping" class="img-fluid circular-image">
+                    </div>
+                    <div class="col-md-8" data-aos="fade-left">
+                        <h4>1. Data Collection</h4>
+                        <p>Our platform automatically scrapes essential product information from Amazon, including pricing, reviews, and sales metrics.</p>
+                    </div>
+                </div>
+             
+                <div class="row align-items-center mt-4">
+                    <div class="col-md-8 order-md-2" data-aos="fade-right">
+                        <h4>2. Data Analysis</h4>
+                        <p>Utilizing AI algorithms, we analyze the collected data to uncover patterns, trends, and performance indicators specific to your products.</p>
+                    </div>
+                    <div class="col-md-4 order-md-1" data-aos="fade-left">
+                        <img src="{% static 'images/analysis.jpeg' %}" alt="Data Analysis" class="img-fluid circular-image">
+                    </div>
+                </div>
+     
+                <div class="row align-items-center mt-4">
+                    <div class="col-md-4" data-aos="fade-right">
+                        <img src="{% static 'images/insights.png' %}" alt="Dashboard" class="img-fluid circular-image">
+                    </div>
+                    <div class="col-md-8" data-aos="fade-left">
+                        <h4>3. Insight Generation</h4>
+                        <p>Our user-friendly dashboard presents the analyzed data through interactive visuals, enabling you to make informed decisions to enhance your product performance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="testimonials py-5">
+    <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">What Our Users Say</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-quote fs-1 text-primary mb-3"></i>
+                        <p class="card-text">"Amazon Vendor Performance has revolutionized the way I analyze my products. The insights are invaluable!"</p>
+                        <h5 class="card-title">Prateek Tiwari</h5>
+                        <p class="card-subtitle text-muted">E-commerce Manager</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-quote fs-1 text-primary mb-3"></i>
+                        <p class="card-text">"The AI analytics provided deep insights that helped boost my product sales by 30% in just two months."</p>
+                        <h5 class="card-title">Imtiaz Muhammed</h5>
+                        <p class="card-subtitle text-muted">Small Business Owner</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-quote fs-1 text-primary mb-3"></i>
+                        <p class="card-text">"The dashboard is intuitive and easy to navigate. It's my go-to tool for monitoring product performance."</p>
+                        <h5 class="card-title">Miya Sebastian</h5>
+                        <p class="card-subtitle text-muted">Marketing Specialist</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="text-white text-center py-5 rounded" style="background-image: url({% static 'images/back3.jpeg' %}); background-size: cover; background-position: center;">
+    <div class="container">
+        <h2 class="mb-4" data-aos="fade-up">Ready to Take Control of Your Products?</h2>
+        <a href="{% url 'registrations:register_product' %}" class="btn btn-light" data-aos="zoom-in">Join Now</a>
+    </div>
+</section>
+
+{% block extra_css %}
+<style>
+    .card {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s;
+    }
+
+    .circular-image {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+</style>
+{% endblock %}
+{% endblock %}
