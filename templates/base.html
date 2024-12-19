@@ -51,8 +51,10 @@
                     <li class="nav-item"><a class="nav-link" href="{% url 'products:dashboard' %}">Dashboard</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'registrations:register_product' %}">Register
                             Product</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'products:registered_products' %}">Registered
-                            Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'products:registered_products' %}">Product
+                            Cart</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'analyze_product' %}">Analyze
+                            Product</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Logout</a></li>
                     {% else %}
                     <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Login</a></li>
